@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adıyaman - Gezi Rehberi</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script type="text/javascript" src="js2.js"></script>
+    <style>
+        #galeri {
+            position: relative;
+            width: 100%;
+            height: 300px;
+            margin-bottom: 10px;
+        }
+        img {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            display: none; 
+        }
+    </style>
+</head>
+<body>
+    <header class="bg-primary text-white text-center py-4">
+        <h1>Adıyaman Gezi Rehberi</h1>
+    </header>
+
+    <main class="container my-5">
+        <div class="row">
+            <div class="col-md-6">
+                <div id="galeri">
+                    <img src="resimler/adiyaman.jpg" alt="Adıyaman" id="resim1" style="display: block;"> 
+                    <img src="resimler/adiyaman2.jpg" alt="Adıyaman 2" id="resim2">
+                    <img src="resimler/adiyaman3.jpg" alt="Adıyaman 3" id="resim3">
+                </div>
+                <div>
+                    <button class="btn btn-primary" onclick="resmiGoster(1)">Resim 1</button>
+                    <button class="btn btn-primary" onclick="resmiGoster(2)">Resim 2</button>
+                    <button class="btn btn-primary" onclick="resmiGoster(3)">Resim 3</button>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <h2>Adıyaman Hakkında</h2>
+                <p>Adıyaman, Nemrut Dağı ve tarihi eserleriyle ünlüdür. Nemrut Dağı, UNESCO Dünya Mirası Listesi'nde yer almakta olup, dev heykelleriyle dikkat çeker. Ayrıca, Adıyaman'ın tarihi zenginlikleri ve eşsiz doğal güzellikleri de keşfe değerdir.</p>
+
+                <h3>Ziyaret Edilmesi Gereken Yerler:</h3>
+                <ul>
+                    <li><strong>Nemrut Dağı:</strong> Kommagene Krallığı'na ait dev heykelleriyle ünlü bir UNESCO Dünya Mirası alanı.</li>
+                    <li><strong>Arsemia Antik Kenti:</strong> Kommagene Krallığı'nın başkentlerinden biri, tarihi kalıntılarla dolu.</li>
+                    <li><strong>Cendere Köprüsü:</strong> Roma dönemine ait tarihi köprü, etkileyici mühendislik örneğidir.</li>
+                </ul>
+
+                <h3>Adıyaman Mutfağı</h3>
+                <p>Adıyaman kebabı, çiğ köfte ve kabak tatlısı gibi lezzetler şehir mutfağının öne çıkan tatlarıdır.</p>
+
+                <a href="index.html" class="btn btn-secondary">Ana Sayfaya Geri Dön</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2024 Türkiye Gezi Rehberi</p>
+    </footer>
+
+  
+</body>
+</html>

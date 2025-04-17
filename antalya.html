@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Antalya - Gezi Rehberi</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script type="text/javascript" src="js2.js"></script>
+    <style>
+        #galeri {
+            position: relative;
+            width: 100%;
+            height: 300px;
+            margin-bottom: 10px;
+        }
+        img {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            display: none; 
+        }
+    </style>
+</head>
+<body>
+    <header class="bg-primary text-white text-center py-4">
+        <h1>Antalya Gezi Rehberi</h1>
+    </header>
+
+    <main class="container my-5">
+        <div class="row">
+            <div class="col-md-6">
+                <div id="galeri">
+                    <img src="resimler/antalya.jpg" alt="Antalya" id="resim1" style="display: block;"> 
+                    <img src="resimler/antalya2.jpg" alt="Antalya 2" id="resim2">
+                    <img src="resimler/antalya3.jpg" alt="Antalya 3" id="resim3">
+                </div>
+                <div>
+                    <button class="btn btn-primary" onclick="resmiGoster(1)">Resim 1</button>
+                    <button class="btn btn-primary" onclick="resmiGoster(2)">Resim 2</button>
+                    <button class="btn btn-primary" onclick="resmiGoster(3)">Resim 3</button>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <h2>Antalya Hakkında</h2>
+                <p>Antalya, Türkiye'nin en popüler tatil beldelerinden biridir. Hem tarihi hem de doğal güzellikleriyle ünlüdür. Antalya, her yıl milyonlarca turistin ilgisini çeker ve eşsiz plajlarıyla bilinir.</p>
+                
+                <h3>Ziyaret Edilmesi Gereken Yerler:</h3>
+                <ul>
+                    <li><strong>Antalya Kaleiçi:</strong> Şehrin tarihi merkezi, dar sokakları ve Osmanlı döneminden kalma yapılarıyla ünlüdür.</li>
+                    <li><strong>Olympos Antik Kenti:</strong> Antik Roma dönemine ait kalıntılar ve muazzam doğasıyla bilinen bir bölge.</li>
+                    <li><strong>Köprülü Kanyon:</strong> Doğal güzellikleri ve rafting imkânı ile popüler bir turistik alan.</li>
+                </ul>
+    
+                <a href="index.html" class="btn btn-secondary">Ana Sayfaya Geri Dön</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-dark text-white text-center py-3">
+ ⬤

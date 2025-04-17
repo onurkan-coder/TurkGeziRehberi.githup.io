@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hakkari - Gezi Rehberi</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script type="text/javascript" src="js2.js"></script>
+    <style>
+        #galeri {
+            position: relative;
+            width: 100%;
+            height: 300px;
+            margin-bottom: 10px;
+        }
+        img {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            display: none; 
+        }
+    </style>
+</head>
+<body>
+    <header class="bg-primary text-white text-center py-4">
+        <h1>Hakkari Gezi Rehberi</h1>
+    </header>
+
+    <main class="container my-5">
+        <div class="row">
+            <div class="col-md-6">
+                <div id="galeri">
+                    <img src="resimler/hakkari.jpg" alt="Hakkari" id="resim1" style="display: block;"> 
+                    <img src="resimler/hakkari2.jpg" alt="Hakkari 2" id="resim2">
+                    <img src="resimler/hakkari3.jpg" alt="Hakkari 3" id="resim3">
+                </div>
+                <div>
+                    <button class="btn btn-primary" onclick="resmiGoster(1)">Resim 1</button>
+                    <button class="btn btn-primary" onclick="resmiGoster(2)">Resim 2</button>
+                    <button class="btn btn-primary" onclick="resmiGoster(3)">Resim 3</button>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <h2>Hakkari Hakkında</h2>
+                <p>Hakkari, doğal güzellikleri ve dağ sporlarıyla ünlü, doğa tutkunları için ideal bir destinasyondur. Yüksek dağlar, vadiler ve eşsiz manzaralar sunar.</p>
+                
+                <h3>Ziyaret Edilmesi Gereken Yerler:</h3>
+                <ul>
+                    <li><strong>Cilo ve Sat Dağları:</strong> Hakkari'nin en yüksek dağları olup, dağcılar için zorlu tırmanış rotaları sunar.</li>
+                    <li><strong>Zap Vadisi:</strong> Doğal güzellikleriyle ünlü, yürüyüş ve doğa sporları için popüler bir bölgedir.</li>
+                    <li><strong>Hakkari Meydan Medresesi:</strong> Osmanlı dönemine ait tarihi bir medrese olup, şehrin kültürel mirasını yansıtır.</li>
+                </ul>
+                
+                <a href="index.html" class="btn btn-secondary">Ana Sayfaya Geri Dön</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2024 Türkiye Gezi Rehberi</p>
+    </footer>
+
+   
+</html>

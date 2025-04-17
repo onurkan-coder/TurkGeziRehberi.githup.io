@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bodrum - Gezi Rehberi</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script type="text/javascript" src="js2.js"></script>
+    <style>
+        #galeri {
+            position: relative;
+            width: 100%;
+            height: 300px;
+            margin-bottom: 10px;
+        }
+        img {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            display: none; 
+        }
+    </style>
+</head>
+<body>
+    <header class="bg-primary text-white text-center py-4">
+        <h1>Bodrum Gezi Rehberi</h1>
+    </header>
+
+    <main class="container my-5">
+        <div class="row">
+            <div class="col-md-6">
+                <div id="galeri">
+                    <img src="resimler/bodrum.jpg" alt="Bodrum" id="resim1" style="display: block;">
+                    <img src="resimler/bodrum2.jpg" alt="Bodrum 2" id="resim2">
+                    <img src="resimler/bodrum3.jpg" alt="Bodrum 3" id="resim3">
+                </div>
+                <div>
+                    <button class="btn btn-primary" onclick="resmiGoster(1)">Resim 1</button>
+                    <button class="btn btn-primary" onclick="resmiGoster(2)">Resim 2</button>
+                    <button class="btn btn-primary" onclick="resmiGoster(3)">Resim 3</button>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <h2>Bodrum Hakkında</h2>
+                <p>Bodrum, muhteşem sahilleri, tarihi yerleri ve canlı gece hayatıyla ünlü popüler bir tatil beldesidir. Özellikle yaz aylarında yoğun turist akınına uğrar.</p>
+                
+                <h3>Ziyaret Edilmesi Gereken Yerler:</h3>
+                <ul>
+                    <li><strong>Bodrum Kalesi:</strong> Şehir merkezine hakim, tarihi bir kale olup, muazzam bir deniz manzarası sunar.</li>
+                    <li><strong>Halikarnas Mozolesi:</strong> Dünyanın yedi harikasından biri olan bu antik mezar, Bodrum'un simgelerindendir.</li>
+                    <li><strong>Bodrum Marina:</strong> Lüks yatlar ve restoranlar ile ünlü, Bodrum'un modern yüzüdür.</li>
+                </ul>
+                
+                <a href="index.html" class="btn btn-secondary">Ana Sayfaya Geri Dön</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2024 Türkiye Gezi Rehberi</p>
+    </footer>
+
+  
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Erzurum - Gezi Rehberi</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script type="text/javascript" src="js2.js"></script>
+    <style>
+        #galeri {
+            position: relative;
+            width: 100%;
+            height: 300px;
+            margin-bottom: 10px;
+        }
+        img {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <header class="bg-primary text-white text-center py-4">
+        <h1>Erzurum Gezi Rehberi</h1>
+    </header>
+
+    <main class="container my-5">
+        <div class="row">
+            <div class="col-md-6">
+                <div id="galeri">
+                    <img src="resimler/erzurum.jpg" alt="Erzurum" id="resim1" style="display: block;"> 
+                    <img src="resimler/erzurum2.jpg" alt="Erzurum 2" id="resim2">
+                    <img src="resimler/erzurum3.jpg" alt="Erzurum 3" id="resim3">
+                </div>
+                <div>
+                    <button class="btn btn-primary" onclick="resmiGoster(1)">Resim 1</button>
+                    <button class="btn btn-primary" onclick="resmiGoster(2)">Resim 2</button>
+                    <button class="btn btn-primary" onclick="resmiGoster(3)">Resim 3</button>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <h2>Erzurum Hakkında</h2>
+                <p>Erzurum, Palandöken Kayak Merkezi ve tarihi medreseleriyle ünlüdür. Soğuk havası ve cağ kebabı ile de meşhur bir şehir olup, kültürel zenginliklere sahiptir.</p>
+                
+                <h3>Ziyaret Edilmesi Gereken Yerler:</h3>
+                <ul>
+                    <li><strong>Palandöken Kayak Merkezi:</strong> Kış sporları için popüler bir bölge, kayak ve dağcılık gibi aktiviteler sunar.</li>
+                    <li><strong>Çifte Minareli Medrese:</strong> Erzurum'un sembollerinden biri olan bu tarihi medrese, Selçuklu mimarisinin örneğidir.</li>
+                    <li><strong>Yakutiye Medresesi:</strong> 14. yüzyıldan kalma, mimarisiyle dikkat çeken tarihi bir medresedir.</li>
+                </ul>
+                
+                <a href="index.html" class="btn btn-secondary">Ana Sayfaya Geri Dön</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2024 Türkiye Gezi Rehberi</p>
+    </footer>
+
+ 
+</html>

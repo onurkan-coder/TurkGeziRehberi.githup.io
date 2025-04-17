@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Isparta - Gezi Rehberi</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script type="text/javascript" src="js2.js"></script>
+    
+    <style>
+        #galeri {
+            position: relative;
+            width: 100%;
+            height: 300px;
+            margin-bottom: 10px;
+        }
+        img {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            display: none; 
+        }
+    </style>
+</head>
+<body>
+    <header class="bg-primary text-white text-center py-4">
+        <h1>Isparta Gezi Rehberi</h1>
+    </header>
+
+    <main class="container my-5">
+        <div class="row">
+            <div class="col-md-6">
+                <div id="galeri">
+                    <img src="resimler/isparta.jpg" alt="Isparta" id="resim1" style="display: block;">
+                    <img src="resimler/isparta2.jpg" alt="Isparta 2" id="resim2">
+                    <img src="resimler/isparta3.jpg" alt="Isparta 3" id="resim3">
+                </div>
+                <div>
+                    <button class="btn btn-primary" onclick="resmiGoster(1)">Resim 1</button>
+                    <button class="btn btn-primary" onclick="resmiGoster(2)">Resim 2</button>
+                    <button class="btn btn-primary" onclick="resmiGoster(3)">Resim 3</button>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <h2>Isparta Hakkında</h2>
+                <p>Isparta, "Güller Diyarı" olarak bilinir ve gül üretimi ile ünlüdür. Türkiye'nin en büyük gül yağı üreticisi olan Isparta, bu güzel çiçekle özdeşleşmiştir. Ayrıca, doğa severler için harika bir destinasyon olan bu şehir, zengin bitki örtüsü ve dağlarıyla da dikkat çeker. Isparta, hem doğal güzellikleri hem de tarihi ve kültürel zenginlikleriyle öne çıkar. Gölleri, dağları ve lavanta tarlalarıyla benzersiz bir görsel şölen sunar.</p>
+                
+                <h3>Isparta'da Ziyaret Edilmesi Gereken Başlıca Yerler:</h3>
+                <ul>
+                    <li><strong>Lavanta Bahçeleri:</strong> Isparta'nın Keçiborlu ilçesinde yer alan lavanta bahçeleri, yaz aylarında mor tarlalarla kaplanır ve her yıl binlerce turist çeker. Lavanta hasadı sırasında bölgeye gelenler, bu eşsiz doğal güzelliği deneyimleyebilirler.</li>
+                    <li><strong>Davraz Kayak Merkezi:</strong> Isparta'nın en bilinen kış turizmi merkezi olan Davraz, kayak severler için mükemmel bir seçenektir. Kayak, dağcılık ve doğa yürüyüşü gibi aktiviteler, burayı dört mevsim tercih edilen bir tatil noktası yapar.</li>
+                    <li><strong>Yazılı Kanyon:</strong> Isparta'nın en etkileyici doğal alanlarından biri olan Yazılı Kanyon, derin vadileri ve tarihi kaya yazıtlarıyla ünlüdür. Doğa yürüyüşleri yapmak ve bölgenin eşsiz manzarasını görmek için harika bir yerdir.</li>
+                    <li><strong>Göller Bölgesi:</strong> Isparta, gölleriyle de tanınır. Eğirdir Gölü ve Kovada Gölü, bölgenin en büyük gölleridir ve doğa yürüyüşleri, tekne gezileri ve fotoğrafçılık gibi aktiviteler için ideal mekanlardır.</li>
+                </ul>
+
+                <a href="index.html" class="btn btn-outline-primary mt-3">Ana Sayfaya Geri Dön</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2024 Türkiye Gezi Rehberi</p>
+    </footer>
+
+   
+</body>
+</html>

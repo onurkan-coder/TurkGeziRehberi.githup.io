@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İzmir - Gezi Rehberi</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script type="text/javascript" src="js2.js"></script>
+    <style>
+        #galeri {
+            position: relative;
+            width: 100%;
+            height: 300px;
+            margin-bottom: 10px;
+        }
+        img {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            display: none; 
+        }
+    </style>
+</head>
+<body>
+    <header class="bg-primary text-white text-center py-4">
+        <h1>İzmir Gezi Rehberi</h1>
+    </header>
+
+    <main class="container my-5">
+        <div class="row">
+            <div class="col-md-6">
+                <div id="galeri">
+                    <img src="resimler/izmir.jpg" alt="İzmir" id="resim1" style="display: block;"> 
+                    <img src="resimler/izmir2.jpg" alt="İzmir 2" id="resim2">
+                    <img src="resimler/izmir3.jpg" alt="İzmir 3" id="resim3">
+                </div>
+                <div>
+                    <button class="btn btn-primary" onclick="resmiGoster(1)">Resim 1</button>
+                    <button class="btn btn-primary" onclick="resmiGoster(2)">Resim 2</button>
+                    <button class="btn btn-primary" onclick="resmiGoster(3)">Resim 3</button>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <h2>İzmir Hakkında</h2>
+                <p>İzmir, Ege'nin incisi olarak bilinen, tarihi ve doğal güzellikleriyle ünlü bir şehirdir. Modern yaşamı ve zengin tarihi geçmişiyle dikkat çeker. İzmir, antik çağlardan günümüze kadar birçok medeniyete ev sahipliği yapmış, bu da ona zengin bir kültürel miras bırakmıştır. Aynı zamanda sıcak iklimi ve sahil kenarındaki plajlarıyla popüler bir tatil beldesidir. İzmir, mutfağı, gece hayatı ve eğlence seçenekleriyle de turistlerin ilgisini çeker.</p>
+                
+                <h3>İzmir'de Ziyaret Edilmesi Gereken Başlıca Yerler:</h3>
+                <ul>
+                    <li><strong>Efes Antik Kenti:</strong> Dünyanın yedi harikasından biri olan Artemis Tapınağı'na ev sahipliği yapmış olan bu antik kent, Roma İmparatorluğu'nun en önemli şehirlerinden biri olmuştur. Efsanevi yapıları ve kalıntılarıyla etkileyici bir deneyim sunar.</li>
+                    <li><strong>Konak Meydanı ve Saat Kulesi:</strong> İzmir'in en bilinen simgelerinden biri olan Saat Kulesi, 1901 yılında inşa edilmiştir ve Konak Meydanı'nın kalbinde yer alır. Meydan, şehri keşfetmek isteyenler için harika bir başlangıç noktasıdır.</li>
+                    <li><strong>Çeşme ve Alaçatı:</strong> Çeşme, güzel plajları ve sıcak iklimiyle popüler bir tatil beldesidir. Alaçatı ise taş sokakları, şirin restoranları ve rüzgar sörfü ile ünlüdür. Bu bölgeler, Ege'nin mavi sularında dinlenmek ve huzur bulmak isteyenler için mükemmeldir.</li>
+                    <li><strong>Kadifekale:</strong> İzmir'in en yüksek noktalarından birine kurulu olan bu kale, şehri yüksekten izleyebileceğiniz bir yerdir. Ayrıca kalenin çevresi, pek çok tarihi yapıya ve yeşil alanlara da ev sahipliği yapmaktadır.</li>
+                </ul>
+
+                <a href="index.html" class="btn btn-outline-primary">Ana Sayfaya Geri Dön</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2024 Türkiye Gezi Rehberi</p>
+    </footer>
+
+    
+</body>
+</html>

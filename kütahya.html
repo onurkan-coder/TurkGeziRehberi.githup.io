@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kütahya - Gezi Rehberi</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script type="text/javascript" src="js2.js"></script>
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        header {
+            background-color: #007bff;
+            color: white;
+        }
+
+        #galeri {
+            position: relative;
+            width: 100%;
+            height: 300px;
+            margin-bottom: 10px;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        #galeri img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            left: 0;
+            top: 0;
+            display: none;
+        }
+
+        #galeri img:first-child {
+            display: block;
+        }
+
+        .btn-group button {
+            margin-right: 5px;
+        }
+
+        a.btn {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="text-center py-4">
+        <h1>Kütahya Gezi Rehberi</h1>
+    </header>
+
+    <main class="container my-5">
+        <div class="row">
+            <div class="col-md-6">
+                <div id="galeri">
+                    <img src="resimler/kutahya.jpg" alt="Kütahya" id="resim1">
+                    <img src="resimler/kutahya2.jpg" alt="Kütahya 2" id="resim2">
+                    <img src="resimler/kutahya3.jpg" alt="Kütahya 3" id="resim3">
+                </div>
+                <div class="btn-group">
+                    <button class="btn btn-primary" onclick="resmiGoster(1)">Resim 1</button>
+                    <button class="btn btn-primary" onclick="resmiGoster(2)">Resim 2</button>
+                    <button class="btn btn-primary" onclick="resmiGoster(3)">Resim 3</button>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <h2>Kütahya Hakkında</h2>
+                <p>Kütahya, tarihi ve kültürel zenginlikleriyle ünlü, Osmanlı İmparatorluğu'na başkentlik yapmış bir şehirdir. Ayrıca, çini ve seramikleriyle de tanınır. Kütahya, Osmanlı dönemi eserleri ve geleneksel el sanatlarıyla büyük bir kültürel mirasa sahiptir. Şehir, tarihi yapıları, doğal güzellikleri ve el işçiliği ürünleriyle önemli bir turistik destinasyon olma özelliğini taşır.</p>
+
+                <h3>Kütahya'da Ziyaret Edilmesi Gereken Başlıca Yerler:</h3>
+                <ul>
+                    <li><strong>Kütahya Kalesi:</strong> Şehri yüksek bir noktadan görebileceğiniz Kütahya Kalesi, hem tarihi hem de stratejik açıdan önemli bir yapıdır.</li>
+                    <li><strong>Çini ve Seramik Müzesi:</strong> Kütahya'nın geleneksel çini sanatını ve seramik tarihini yansıtan önemli eserlerin bulunduğu bir müzedir.</li>
+                    <li><strong>Domaniç Yaylası:</strong> Doğayla iç içe vakit geçirmek isteyenler için muazzam bir doğa harikasıdır.</li>
+                    <li><strong>Hisar Camii:</strong> Osmanlı mimarisinin güzel örneklerinden biri olan tarihi bir camidir.</li>
+                    <li><strong>Kütahya Arkeoloji Müzesi:</strong> Antik dönemlerden kalan eserlerin sergilendiği bir müzedir.</li>
+                </ul>
+
+                <a href="index.html" class="btn btn-secondary">Ana Sayfaya Geri Dön</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2025 Türkiye Gezi Rehberi</p>
+    </footer>
+
+   
+
+</body>
+</html>

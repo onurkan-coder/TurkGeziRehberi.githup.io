@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Türkiye'nin en güzel şehirlerini keşfedin. Adana, İstanbul, Antalya ve daha fazlası hakkında bilgiler.">
+    <title>Türkiye Gezi Rehberi</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" >
+    <link rel="stylesheet" href="styles.css"> 
+    <script type="text/javascript" src="script.js"></script>
+    <script type="text/javascript" src="js2.js"></script>
+    <link rel="stylesheet" href="yorum.css"> 
+    <link rel="stylesheet" href="kullanici.css"> 
+</head>
+<body>
+  
+    <!-- Menü çubuğu -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <img src="resimler/square.png" alt="Türk Bayrağı" width="30" height="20">
+            <a class="navbar-brand" href="index.html">Gezi Rehberi</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                    </li>
+                     <li class="nav-item"><a class="nav-link" href="index.html"> <i class="fa fa-home"></i> Ana Sayfa</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html"> <i class="fa fa-user"></i> Hakkında</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html"> <i class="fa fa-phone"></i> İletişim</a></li>
+                    <li class="nav-item"><a class="nav-link" href="kullanici.html"> <i class="fas fa-key"></i></i> kullanıcı Kayıt</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+<!-- Arama Çubuğu -->
+<div class="search-bar d-flex justify-content-center my-4">
+    <div class="input-group w-75">
+        <input type="text" class="form-control" id="searchInput" placeholder="Şehir Ara..." onkeyup="filterCities()" aria-label="Ara">
+        <button class="btn btn-primary" onclick="filterCities()">Ara</button>
+    </div>
+</div>
+
+    <header class="hero">
+        <h1>Türkiye Gezi Rehberi</h1>
+        <p>Hayalini kurduğunuz yerleri keşfetmeye başlayın.</p>
+        <a href="#cities" class="btn">Şehirleri Keşfet</a>
+    </header>
+    <!-- Gece/Gündüz Modu Butonları -->
+           <div class="text-center my-3">
+            <button type="button" onclick="darkMode()" class="btn btn-dark">Gece Modu</button>
+            <button type="button" onclick="lightMode()" class="btn btn-light">Gündüz Modu</button>
+        </div>
+    <!--  Slider -->
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <!-- Slide 1 -->
+            <div class="carousel-item active">
+                <img src="resimler/ankara.jpg" class="d-block w-100" alt="Ankara">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Ankara</h5>
+                    <p>Türkiye'nin başkenti Ankara'nın zengin dokusunu keşfedin.</p>
+                </div>
+            </div>
+            <!-- Slide 2 -->
+            <div class="carousel-item">
+                <img src="resimler/istanbul.jpg" class="d-block w-100" alt="Kapadokya">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>İstanbul</h5>
+                    <p>Tarihin kalbi İstanbul'u keşfedin.</p>
+                </div>
+            </div>
+            <!-- Slide 3 -->
+            <div class="carousel-item">
+                <img src="resimler/rize.jpg" class="d-block w-100" alt="rize">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Rize</h5>
+                    <p>Yeşilin binbir tonu Rize'de.</p>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <!--Şehirler -->
+
+    <main class="container my-5">
+        <h2 class="text-center mb-5">Şehirler</h2>
+        <div class="row g-4" id="cities">
+            <!-- Şehir Kartları -->
+            <!-- Her şehir için bir kart bölümü hocam-->
+            <div class="col-md-4">
+                <div class="card">
+                     <!-- Adana -->
+                    <img src="resimler/adana.jpg" alt="Adana">
+                    <div class="card-content">
+                        <h5 class="card-title">Adana</h5>
+                        <p class="card-text">Eşsiz yemekleri ve tarihiyle Adana'yı keşfedin.</p>
+                        <button class="btn btn-primary" onclick="addToFavorites('Adana')">Favorilere Ekle</button>
+                        <a href="adana.html" class="btn">Daha Fazla Oku</a>
+                       
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                     <!-- Ankara -->
+                    <img src="resimler/ankara.jpg" alt="Ankara">
+                    <div class="card-content">
+                        <h5 class="card-title">Ankara</h5>
+                        <p class="card-text">Türkiye'nin başkenti Ankara'nın zengin dokusunu keşfedin.</p>
+                        <button class="btn btn-primary" onclick="addToFavorites('ankara')">Favorilere Ekle</button>
+                        <a href="ankara.html" class="btn">Daha Fazla Oku</a>
+                       
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                     <!-- Antalya -->
+                    <img src="resimler/antalya.jpg" alt="Antalya">
+                    <div class="card-content">
+                        <h5 class="card-title">Antalya</h5>
+                        <p class="card-text">Muhteşem plajları ve tarihiyle Antalya sizi bekliyor.</p>
+                        <button class="btn btn-primary" onclick="addToFavorites('antalya')">Favorilere Ekle</button>
+                        <a href="antalya.html" class="btn">Daha Fazla Oku</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                     <!-- Bursa -->
+                    <img src="resimler/bursa.jpg" alt="Bursa">
+                    <div class="card-content">
+                        <h5 class="card-title">Bursa</h5>
+                        <p class="card-text">Yeşil Bursa'nın tarihi ve doğal güzelliklerini keşfedin.</p>
+                        <button class="btn btn-primary" onclick="addToFavorites('bursa')">Favorilere Ekle</button>
+                        <a href="bursa.html" class="btn">Daha Fazla Oku</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                     <!-- Çanakkale -->
+                    <img src="resimler/canakkale.jpg" alt="Çanakkale">
+                    <div class="card-content">
+                        <h5 class="card-title">Çanakkale</h5>
+                        <p class="card-text">Tarihin yazıldığı Çanakkale'yi ziyaret edin.</p>
+                        <button class="btn btn-primary" onclick="addToFavorites('canakkale')">Favorilere Ekle</button>
+                        <a href="çanakkle.html" class="btn">Daha Fazla Oku</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                     <!-- Denizli -->
+                    <img src="resimler/denizli.jpg" alt="Denizli">
+                    <div class="card-content">
+                        <h5 class="card-title">Denizli</h5>
+                        <p class="card-text">Pamukkale'nin bembeyaz güzelliklerini keşfedin.</p>
+                        <button class="btn btn-primary" onclick="addToFavorites('denizli')">Favorilere Ekle</button>
+                        <a href="denizli.html" class="btn">Daha Fazla Oku</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                     <!-- Erzurum -->
+                    <img src="resimler/erzurum.jpg" alt="Erzurum">
+                    <div class="card-content">
+                        <h5 class="card-title">Erzurum</h5>
+                        <p class="card-text">Tarihi ve kış sporlarıyla Erzurum sizi bekliyor.</p>
+                        <button class="btn btn-primary" onclick="addToFavorites('erzurum')">Favorilere Ekle</button>
+                        <a href="erzurum.html" class="btn">Daha Fazla Oku</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                     <!-- İstanbul -->
+                    <img src="resimler/istanbul.jpg" alt="İstanbul">
+                    <div class="card-content">
+                        <h5 class="card-title">İstanbul</h5>
+                        <p class="card-text">Tarihin kalbi İstanbul'u keşfedin.</p>
+                        <button class="btn btn-primary" onclick="addToFavorites('istanbul')">Favorilere Ekle</button>
+                        <a href="istanbul.html" class="btn">Daha Fazla Oku</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                     <!-- İzmir -->
+                    <img src="resimler/izmir.jpg" alt="İzmir">
+                    <div class="card-content">
+                        <h5 class="card-title">İzmir</h5>
+                        <p class="card-text">Ege'nin incisi İzmir sizi bekliyor.</p>
+                        <button class="btn btn-primary" onclick="addToFavorites('İzmir')">Favorilere Ekle</button>
+                        <a href="izmir.html" class="btn">Daha Fazla Oku</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                     <!-- Mardin -->
+                    <img src="resimler/mardin.jpg" alt="Mardin">
+                    <div class="card-content">
+                        <h5 class="card-title">Mardin</h5>
+                        <p class="card-text">Tarihi taş evleriyle büyüleyen Mardin.</p>
+                        <button class="btn btn-primary" onclick="addToFavorites('Mardin')">Favorilere Ekle</button>
+                        <a href="mardin.html" class="btn">Daha Fazla Oku</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                     <!-- Rize -->
+                    <img src="resimler/rize.jpg" alt="Rize">
+                    <div class="card-content">
+                        <h5 class="card-title">Rize</h5>
+                        <p class="card-text">Yeşilin binbir tonu Rize'de.</p>
+                        <button class="btn btn-primary" onclick="addToFavorites('Rize')">Favorilere Ekle</button>
+                        <a href="rize.html" class="btn">Daha Fazla Oku</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                     <!-- Trabzon -->
+                    <img src="resimler/trabzon.jpg" alt="Trabzon">
+                    <div class="card-content">
+                        <h5 class="card-title">Trabzon</h5>
+                        <p class="card-text">Karadeniz'in incisi Trabzon'u ziyaret edin.</p>
+                        <button class="btn btn-primary" onclick="addToFavorites('trabzon')">Favorilere Ekle</button>
+                        <a href="trabzon.html" class="btn">Daha Fazla Oku</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                     <!-- Şanlı Urfa -->
+                    <img src="resimler/sanliurfa.jpg" alt="Şanlıurfa">
+                    <div class="card-content">
+                        <h5 class="card-title">Şanlıurfa</h5>
+                        <p class="card-text">Tarihin ve kültürün buluştuğu şehir Şanlıurfa'yı keşfedin.</p>
+                        <button class="btn btn-primary" onclick="addToFavorites('Şanlıurfa')">Favorilere Ekle</button>
+                        <a href="şanlıurfa.html" class="btn">Daha Fazla Oku</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                     <!-- Çorum -->
+                    <img src="resimler/corum.jpg" alt="Çorum">
+                    <div class="card-content">
+                        <h5 class="card-title">Çorum</h5>
+                        <p class="card-text">Tarihi ve doğal güzellikleriyle Çorum'u keşfedin.</p>
+                        <button class="btn btn-primary" onclick="addToFavorites('Çorum')">Favorilere Ekle</button>
+                        <a href="çorum.html" class="btn">Daha Fazla Oku</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                     <!-- Hakkari -->
+                    <img src="resimler/hakkari.jpg" alt="Hakkâri">
+                    <div class="card-content">
+                        <h5 class="card-title">Hakkâri</h5>
+                        <p class="card-text">Doğal güzellikleri ve huzur veren manzarasıyla Hakkâri'yi keşfedin.</p>
+                        <button class="btn btn-primary" onclick="addToFavorites('Hakkari')">Favorilere Ekle</button>
+                        <a href="hakkari.html" class="btn">Daha Fazla Oku</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                     <!-- Bodrum -->
+                    <img src="resimler/bodrum.jpg" alt="Bodrum">
+                    <div class="card-content">
+                        <h5 class="card-title">Bodrum</h5>
+                        <p class="card-text">Ege'nin incisi Bodrum'un eşsiz plajları ve gece hayatını keşfedin.</p>
+                        <button class="btn btn-primary" onclick="addToFavorites('Bodrum')">Favorilere Ekle</button>
+                        <a href="bodrum.html" class="btn">Daha Fazla Oku</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                     <!-- Bilecik -->
+                    <img src="resimler/bilecik.jpg" alt="Bilecik">
+                    <div class="card-content">
+                        <h5 class="card-title">Bilecik</h5>
+                        <p class="card-text">Tarihi zenginlikleri ve doğa harikalarıyla Bilecik'i keşfedin.</p>
+                        <button class="btn btn-primary" onclick="addToFavorites('Bilecik')">Favorilere Ekle</button>
+                        <a href="bilecik.html" class="btn">Daha Fazla Oku</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                     <!-- Isparta -->
+                    <img src="resimler/isparta.jpg" alt="Isparta">
+                    <div class="card-content">
+                        <h5 class="card-title">Isparta</h5>
+                        <p class="card-text">Gölleri, lavanta tarlaları ve doğal güzellikleriyle Isparta'yı keşfedin.</p>
+                        <button class="btn btn-primary" onclick="addToFavorites('ısparta')">Favorilere Ekle</button>
+                        <a href="ısparta.html" class="btn">Daha Fazla Oku</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                     <!-- Adiyaman -->
+                    <img src="resimler/adiyaman.jpg" alt="Adıyaman">
+                    <div class="card-content">
+                        <h5 class="card-title">Adıyaman</h5>
+                        <p class="card-text">Nemrut Dağı'nın eşsiz manzarası ve tarihi zenginlikleriyle Adıyaman'ı keşfedin.</p>
+                        <button class="btn btn-primary" onclick="addToFavorites('Adiyaman')">Favorilere Ekle</button>
+                        <a href="adıyaman.html" class="btn">Daha Fazla Oku</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                     <!-- Burdur -->
+                    <img src="resimler/burdur.jpg" alt="Burdur">
+                    <div class="card-content">
+                        <h5 class="card-title">Burdur</h5>
+                        <p class="card-text">Gölleri, doğal güzellikleri ve tarihi mekanlarıyla Burdur'u keşfedin.</p>
+                        <button class="btn btn-primary" onclick="addToFavorites('burdur')">Favorilere Ekle</button>
+                        <a href="burdur.html" class="btn">Daha Fazla Oku</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                     <!-- Muğla -->
+                    <img src="resimler/mugla.jpg" alt="Muğla">
+                    <div class="card-content">
+                        <h5 class="card-title">Muğla</h5>
+                        <p class="card-text">Ege'nin incisi Muğla'nın eşsiz sahilleri ve tarihi mekanlarını keşfedin.</p>
+                        <button class="btn btn-primary" onclick="addToFavorites('muğla')">Favorilere Ekle</button>
+                        <a href="muğla.html" class="btn">Daha Fazla Oku</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                     <!-- Kütahya -->
+                    <img src="resimler/kutahya.jpg" alt="Kütahya">
+                    <div class="card-content">
+                        <h5 class="card-title">Kütahya</h5>
+                        <p class="card-text">Tarihi zenginlikleri, çini sanatları ve termal sularıyla Kütahya'yı keşfedin.</p>
+                        <button class="btn btn-primary" onclick="addToFavorites('kütahya')">Favorilere Ekle</button>
+                        <a href="kütahya.html" class="btn">Daha Fazla Oku</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                     <!-- Nevşehir -->
+                    <img src="resimler/nevsehir.jpg" alt="Nevşehir">
+                    <div class="card-content">
+                        <h5 class="card-title">Nevşehir</h5>
+                        <p class="card-text">Kapadokya'nın benzersiz peri bacaları ve tarihi zenginlikleriyle Nevşehir'i keşfedin.</p>
+                        <button class="btn btn-primary" onclick="addToFavorites('nevşehir')">Favorilere Ekle</button>
+                        <a href="nevşehir.html" class="btn">Daha Fazla Oku</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                     <!-- Konya -->
+                    <img src="resimler/konya.jpg" alt="Konya">
+                    <div class="card-content">
+                        <h5 class="card-title">Konya</h5>
+                        <p class="card-text">Mevlana'nın diyarı, tarihi ve kültürel zenginlikleriyle Konya'yı keşfedin.</p>
+                        <button class="btn btn-primary" onclick="addToFavorites('konya')">Favorilere Ekle</button>
+                        <a href="konya.html" class="btn">Daha Fazla Oku</a>
+                    </div>
+                </div>
+            </div>
+            
+            
+            <!-- Toplamda 24 şehir var hocam Türkiyenin öne çıkan illerinden seçtim -->
+        </div>
+    </main>
+    <hr class="thick-line">
+   <!-- Favori Şehirler Bölümü -->
+<div class="container my-5">
+    <h2 class="text-center mb-5">Favori Şehirler</h2>
+    <ul id="favoritesList" class="list-group">
+       
+    </ul>
+</div>
+    
+   
+    
+    <div id="yorumlarBolumu">
+        <h2>Yorumlar ve Düşünceler</h2>
+        <div id="yorumYazmaAlani">
+            <select id="cinsiyet">
+                <option value="erkek">Erkek</option>
+                <option value="kadin">Kadın</option>
+            </select>
+            <textarea id="yorum" placeholder="Yorumunuzu buraya yazın..." rows="4"></textarea>
+            <button onclick="yorumGonder()">Gönder</button>
+        </div>
+        <div id="yorumlarKutusu">
+           
+        </div>
+    </div>
+    <hr class="thick-line">
+        <!-- Footer -->
+    <footer class="bg-dark text-white pt-5 pb-4">
+        <div class="container">
+            <div class="row">
+                <!-- Hızlı Bağlantılar -->
+                <div class="col-md-4 mb-3">
+                    <h5 class="text-uppercase">Hızlı Bağlantılar</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="about.html" class="text-white">Hakkımızda</a></li>
+                        <li><a href="contact.html" class="text-white">İletişim</a></li>
+                    </ul>
+                </div>
+            
+
+                
+            <!-- Sosyal Medya -->
+            <div class="col-md-4 mb-3">
+                <h5 class="text-uppercase">Bizi Takip Edin</h5>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com" class="text-white me-3" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://twitter.com" class="text-white me-3" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com" class="text-white me-3" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com" class="text-white me-3" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            
+            <!-- İletişim Bilgileri -->
+            <div class="col-md-4 mb-3">
+                <h5 class="text-uppercase">İletişim</h5>
+                <p><i class="fas fa-phone-alt"></i> +90 542 171 95 45</p>
+                <p><i class="fas fa-envelope"></i> info@gezirehberi.com</p>
+                <p><i class="fas fa-map-marker-alt"></i> İzmir, Türkiye</p>
+            </div>
+        </div>
+
+        <div class="text-center mt-4">
+            <p>&copy; 2024 Türkiye Gezi Rehberi. Tüm Hakları Saklıdır.</p>
+        </div>
+    </div>
+</footer>
+
+<!-- FontAwesome (Sosyal medya simgeleri için) -->
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+
+    <!-- Bootstrap  -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İstanbul - Gezi Rehberi</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script type="text/javascript" src="js2.js"></script>
+    <style>
+        #galeri {
+            position: relative;
+            width: 100%;
+            height: 300px;
+            margin-bottom: 10px;
+        }
+        img {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            display: none; 
+        }
+    </style>
+</head>
+<body>
+    <header class="bg-primary text-white text-center py-4">
+        <h1>İstanbul Gezi Rehberi</h1>
+    </header>
+
+    <main class="container my-5">
+        <div class="row">
+            <div class="col-md-6">
+                <div id="galeri">
+                    <img src="resimler/istanbul.jpg" alt="İstanbul" id="resim1" style="display: block;"> 
+                    <img src="resimler/istanbul2.jpg" alt="İstanbul 2" id="resim2">
+                    <img src="resimler/istanbul3.jpg" alt="İstanbul 3" id="resim3">
+                </div>
+                <div>
+                    <button class="btn btn-primary" onclick="resmiGoster(1)">Resim 1</button>
+                    <button class="btn btn-primary" onclick="resmiGoster(2)">Resim 2</button>
+                    <button class="btn btn-primary" onclick="resmiGoster(3)">Resim 3</button>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <h2>İstanbul Hakkında</h2>
+                <p>İstanbul, tarih boyunca birçok medeniyete ev sahipliği yapmış, kültürel ve tarihi zenginlikleriyle dünyanın en önemli şehirlerinden biridir. Bizans, Osmanlı ve Cumhuriyet dönemlerinin izlerini taşıyan bu şehir, tarihi yarımada, boğaz ve modern yaşamı bir arada sunar. İstanbul, hem kültürel hem de ticari açıdan Türkiye'nin en önemli merkezi olup, dünya çapında birçok turistin ilgisini çeker.</p>
+                
+                <h3>Ziyaret Edilmesi Gereken Yerler:</h3>
+                <ul>
+                    <li><strong>Ayasofya:</strong> Bizans İmparatoru I. Justinianus tarafından inşa edilen Ayasofya, hem kilise hem cami olarak kullanıldıktan sonra günümüzde müze olarak ziyaret edilmektedir. Mimari ihtişamı ve tarihi önemi büyüktür.</li>
+                    <li><strong>Sultanahmet Camii:</strong> Mavi Camii olarak da bilinen bu cami, Osmanlı İmparatorluğu'nun zarif örneklerinden biridir. İç mekanındaki mavi çini karoları ile ünlüdür.</li>
+                    <li><strong>Topkapı Sarayı:</strong> Osmanlı İmparatorluğu'nun yönetim merkezi olan bu saray, sultanların yaşam alanları ve zengin koleksiyonlarıyla dikkat çeker. Sarayda yer alan Harem, kutsal emanetler ve mutfaklar ziyaretçilerin ilgisini çeker.</li>
+                    <li><strong>Kapalı Çarşı:</strong> İstanbul'un en büyük ve en eski kapalı çarşısı olan Kapalı Çarşı, 4.000'den fazla dükkanıyla alışveriş meraklıları için bir cennettir.</li>
+                    <li><strong>Galata Kulesi:</strong> İstanbul'un en eski yapılarından biri olan Galata Kulesi, muazzam manzarasıyla şehri farklı açılardan görme imkanı sunar.</li>
+                    <li><strong>Büyükada:</strong> İstanbul'un Prens Adaları'ndan biri olan Büyükada, deniz manzarası ve sakin atmosferiyle popüler bir kaçamak yeridir.</li>
+                </ul>
+
+                <a href="index.html" class="btn btn-outline-primary">Ana Sayfaya Geri Dön</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2024 Türkiye Gezi Rehberi</p>
+    </footer>
+
+    
+</body>
+</html>
