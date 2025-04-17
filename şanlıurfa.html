@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Şanlıurfa - Gezi Rehberi</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script type="text/javascript" src="js2.js"></script>
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        header {
+            background-color: #0d6efd;
+            color: white;
+        }
+
+        #galeri {
+            position: relative;
+            width: 100%;
+            height: 300px;
+            margin-bottom: 10px;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        #galeri img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            left: 0;
+            top: 0;
+            display: none;
+        }
+
+        #galeri img:first-child {
+            display: block;
+        }
+
+        .btn-group button {
+            margin-right: 5px;
+        }
+
+        a.btn {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="text-center py-4">
+        <h1>Şanlıurfa Gezi Rehberi</h1>
+    </header>
+
+    <main class="container my-5">
+        <div class="row">
+            <div class="col-md-6">
+                <div id="galeri">
+                    <img src="resimler/sanliurfa.jpg" alt="Şanlıurfa 1" id="resim1">
+                    <img src="resimler/sanliurfa2.jpg" alt="Şanlıurfa 2" id="resim2">
+                    <img src="resimler/sanliurfa3.jpg" alt="Şanlıurfa 3" id="resim3">
+                </div>
+                <div class="btn-group">
+                    <button class="btn btn-primary" onclick="resmiGoster(1)">Resim 1</button>
+                    <button class="btn btn-primary" onclick="resmiGoster(2)">Resim 2</button>
+                    <button class="btn btn-primary" onclick="resmiGoster(3)">Resim 3</button>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <h2>Şanlıurfa Hakkında</h2>
+                <p>Şanlıurfa, Göbeklitepe gibi tarihi alanları ve eşsiz yemek kültürüyle ünlüdür. Balıklıgöl, şehrin tarihi zenginlikleri ve dini anlam taşıyan önemli yerlerinden biridir.</p>
+
+                <h3>Şanlıurfa'da Ziyaret Edilmesi Gereken Başlıca Yerler:</h3>
+                <ul>
+                    <li><strong>Göbeklitepe:</strong> Dünyanın bilinen en eski tapınak kompleksi olan Göbeklitepe, tarih öncesi çağlara ışık tutan bir alan olarak büyük öneme sahiptir.</li>
+                    <li><strong>Balıklıgöl:</strong> İslam mitolojisinde önemli bir yer tutan Balıklıgöl, kutsal balıkların yaşadığı bir alan olarak ziyaretçi çeker.</li>
+                    <li><strong>Harran:</strong> Antik şehir olan Harran, ünlü höyükleri ve geleneksel kubbeli evleriyle dikkat çeker.</li>
+                </ul>
+
+                <a href="index.html" class="btn btn-outline-primary">Ana Sayfaya Geri Dön</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2025 Türkiye Gezi Rehberi</p>
+    </footer>
+
+    
+</body>
+</html>
